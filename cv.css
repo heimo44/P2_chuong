@@ -1,0 +1,52 @@
+/* introduction */
+h1
+{
+	font-size: 3em;
+	margin-bottom: 1px;
+}
+h1 + p
+{
+	font-size :1.5em;
+	margin-top: 1px
+}	
+
+.nom
+{
+	color: orange
+}
+
+.uj
+{
+	text-decoration: underline;
+	text-decoration-color: orange
+}
+
+/* Info CV */
+
+h2
+{
+	text-decoration: underline;
+	text-decoration-color: orange
+}
+.rightbody
+{
+	position: absolute;
+	left: 350px;
+	text-align: left
+}	
+/* partie personelle, left side */
+.infopers
+{
+	background-color: orange;
+	text-align: left;
+	position: absolute;
+	left: auto;
+	max-width: 300px;
+	max-height:3508px
+}	
+
+h3
+{
+	background-color: grey
+}
+
