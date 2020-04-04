@@ -1,52 +1,219 @@
-/* introduction */
-h1
-{
-	font-size: 3em;
-	margin-bottom: 1px;
-}
-h1 + p
-{
-	font-size :1.5em;
-	margin-top: 1px
-}	
 
-.nom
-{
+/*Question "note" :max height + width = feuille A4?*/
+body{
+	margin:0;
+	font-family: 'Roboto', sans-serif;
+}
+.container{
+	display: flex;
+
+}
+/* Info personelle, left part*/
+.containerleft{
+	width: 30%;
+	background-color: orange;
+	position:relative;
+}
+.photo-profil{
+	margin-top: 30px;
+	text-align: center;
+	transform: rotate(270deg);
+}
+.photo{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 3px orange solid;
+}
+.contact{
+	text-align: left;
+	color: black;
+}
+.contact p{
+	margin-left: 30px;
+}
+.moi p{
+	margin: 0 30px 0 30px;
+	text-align: justify;
+}
+
+.loisirs{
+
+	text-align: center;
+	margin-bottom: 20px;
+	
+}
+h3{
+	color: orange;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background-color: rgb(55, 55, 55);
+	text-align:center;
+	padding: 15px;
+}
+.loisirs i{
+	width:20px;
+	height: 20px;
+	margin: 0 5px;
+	padding: 15px;
+	border: 1px black solid;
+	border-radius: 50%;
+	font-size: 25px;
+}
+	/* En-tête */
+header{
+	margin: 50px 0;
+}
+h1{
+	font-size: 50px;
+	margin-bottom: 1px;
+	text-transform: uppercase;
+}
+h1 + p{
+	font-size :25px;
+	margin-top: 1px; 
+}
+.nom{
 	color: orange
 }
 
-.uj
-{
+.job{
 	text-decoration: underline;
 	text-decoration-color: orange
 }
-
-/* Info CV */
-
-h2
-{
-	text-decoration: underline;
-	text-decoration-color: orange
+.pdp{
+	display: none;
 }
-.rightbody
-{
-	position: absolute;
-	left: 350px;
-	text-align: left
-}	
-/* partie personelle, left side */
-.infopers
-{
-	background-color: orange;
-	text-align: left;
-	position: absolute;
-	left: auto;
-	max-width: 300px;
-	max-height:3508px
-}	
-
-h3
-{
-	background-color: grey
+	/* Info CV*/
+.containerright{
+	width: 70%;
+	margin-left: 5%;
+	margin-right: 5%;
+	}
+	/* titre main section*/
+h2{
+	padding-top: 10px;
 }
 
+h2 i{
+	margin-right: 10px;
+	color:orange;
+	float: 5%;
+
+}
+.surline{
+	border-bottom: 4px orange solid;
+	margin-top: -5px;
+	margin-bottom: 30px;
+}
+em{
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+	/* body leftpart and right part*/
+.bodycontainer{
+	display: flex;
+	flex-wrap: wrap;
+}
+.leftbody{
+	width: 30%;
+	/* icon body text*/
+}
+.rithtbody{
+	width: 70%;
+}
+.centerbody{
+	width: 50%;
+}
+.circledot, .circle{
+	color: orange;
+	margin-right: 10px;
+}
+/* bottom part */
+.bottomcontainer{
+	display: flex;
+}
+.bottomleft{
+	width: 60%;
+	margin-bottom: 5%;
+}	
+.bottomright{
+	width: 40%;
+	margin-bottom: 5%;
+}
+
+/*Query + responsive*/
+
+@media screen and (max-width: 750px){	
+	.container{
+		display: block;
+	}
+	.rightpart{
+		width: 85%;
+	}
+	.containerleft
+	{	
+		display: none;
+	}
+	/* Photo miniature*/
+	.pdp{
+		display: block;
+	}
+	.pdpmini{
+		float: right;
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		transform: rotate(270deg);
+	}
+	/* block central*/
+	.rightcont{
+		width:auto;
+	}
+	.leftcont{
+		width: auto;
+	}
+	.bottomleft{
+		width: auto;
+	}
+	.bottomright{
+		width: auto;
+	}
+	/* partie texte centrale*/
+	h1{
+		font-size: 20px;
+	}
+	h2{
+		font-size: 18px;
+	}
+	em{
+		font-size: 15px;
+	}
+	p{
+		font-size: normal;
+	}
+}
+/*
+
+
+}
+.leftcont{
+	width: 27%;
+	
+	margin-right: 15px;
+}
+.rightcont{
+	width:70%;
+}
+p i{
+	color: orange;
+}
+.fa-circle, .fa-dot-circle-o{
+	width: auto;
+	float: left;
+}
+
+/* Pied de page 
+
+
+*/
