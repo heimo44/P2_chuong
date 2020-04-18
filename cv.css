@@ -6,13 +6,8 @@ body{
 .container{
 	display: flex;
 }
+/* photo */
 
-/* Info personelle, left part*/
-.containerleft{
-	width: 30%;
-	background-color: orange;
-	position:relative;
-}
 .photo-profil{
 	margin-top: 30px;
 	text-align: center;
@@ -24,6 +19,16 @@ body{
 	border-radius: 50%;
 	border: 3px orange solid;
 }
+.pdp{
+	display: none;
+}
+/* body left*/
+.containerleft{
+	width: 30%;
+	background-color: orange;
+	position: relative;
+}
+/* titre body left*/
 h3{
 	color: orange;
 	text-transform: uppercase;
@@ -81,41 +86,11 @@ h1 + p{
 	text-decoration: underline;
 	text-decoration-color: orange
 }
-.pdp{
-	display: none;
-}
-
-	/*Corps CV*/
+		/* Body center*/
 .containerright{
 	width: 70%;
-	padding-left: 5%;
-	padding-right: 5%;
+	padding: 0 5% 0 5%;
 }
-		/*-titre main section*/
-h2{
-	padding-top: 10px
-	font-size: 27px;
-}
-
-h2 i{
-	margin-right: 10px;
-	color:orange;
-}
-.surline{
-	border-bottom: 4px orange solid;
-	margin-top: -5px;
-	margin-bottom: 30px;
-}
-strong{
-	font-size: 18px;
-	margin-bottom: 20px;
-}
-		/* icone center*/
-.circledot, .circle{
-	color: orange;
-	margin-right: 10px;
-}
-		/* body leftpart and right part*/
 .bodycontainer{
 	display: flex;
 }
@@ -125,14 +100,38 @@ strong{
 .rightbody{
 	width: 70%;
 }
-		/*-Footer ou Bottom*/
+		/*-titre body center*/
+h2{
+	padding-top: 10px;
+	font-size: 27px;
+}
+
+h2 i{
+	margin-right: 10px;
+	color:orange;
+}
+.surline{
+	border-bottom: 4px orange solid;
+	margin-bottom: 30px;
+}
+strong{
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+		/* icon center*/
+.circledot, .circle{
+	color: orange;
+	margin-right: 10px;
+}
+		/*-Footer*/
 .bottomcontainer{
 	display: flex;
 }
 .centerbody{
 	width: 50%;
 }
-
+/* responsive*/
 @media screen and (max-width: 1024px){
 	
 	.containerright{
@@ -141,9 +140,6 @@ strong{
 	.containerleft
 	{	
 		width: 50% !important;
-	}
-	.containerright header, .containerright section, .containerright footer{
-		
 	}
 	.bodycontainer, .bottomcontainer{
 	display: inherit;
@@ -156,22 +152,30 @@ strong{
 @media screen and (max-width: 768px){
 	.container{
 		flex-direction: column;
-		text-align: center; 
-	}
-	header{
 		text-align: center;
 	}
 	.containerright{
 		width: 100% !important;
 		order: 1;
-		padding: inherit;
+		padding: 0 5% 0 5% !important;
 	}
 	.containerleft
 	{	
 		width: 100% !important;
 		order: 2;
+		margin: 0 5% 0 5% !important;
 	}
-
+	.header{
+	padding:50px 0 50px 0 !important;
+	}
+		/* container left transform*/
+	.loisirs{
+	text-align: inherit;
+	bottom: inherit;
+	position: inherit;
+	width:inherit;
+	}
+	/* Photo */
 	.pdp{
 		display: block;
 
@@ -186,26 +190,5 @@ strong{
 	.photo-profil{
 		display: none;
 	}
-	/* container left transform*/
-	.containerleft, h3{
-		background-color: inherit;
-	}
-	.surlinebottom{
-		border-bottom: 4px orange solid;
-		margin-top: -5px;
-		margin-bottom: 30px;
-	}
-	h3{
-		color: inherit;
-		letter-spacing: 0px;
-		text-align:inherit;
-		padding: inherit;
-		font-size: 27px;
-	}
-	.loisirs{
-	text-align: inherit;
-	bottom: inherit;
-	position: inherit;
-	width:inherit;
-	}
+
 }
